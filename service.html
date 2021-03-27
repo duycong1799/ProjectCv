@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <!--Begin Header-->
+    <!-- Begin Header-->
     <div class="wrapper service">
         <!-- <div class="background">
-                <img src="./assets/image/bg.png" alt="Bg">
-            </div> -->
+            <img src="./assets/image/bg.png" alt="Bg">
+        </div> -->
         <div class="header">
             <!--Header Navbar-->
             <div class="header__nav">
@@ -30,10 +30,20 @@
                     </div>
                     <div class="header__left--menu">
                         <ul class="menu-list">
-                            <li class="menu-item active"><a href="index.html" class="active">Home</a></li>
-                            <li class="menu-item"><a href="catalog.html">Catalog</a></li>
-                            <li class="menu-item"><a href="blog.html">Blog</a></li>
-                            <li class="menu-item"><a href="#">Pages</a></li>
+                            <li class="menu-item active"><a href="index.html" class="active parentLink">Home</a></li>
+                            <li class="menu-item"><a href="catalog.html" class="parentLink">Catalog</a></li>
+                            <li class="menu-item"><a href="blog.html" class="parentLink">Blog</a></li>
+                            <li class="menu-item"><a href="#" class="parentLink">Pages</a>
+                                <ul class="sub-menu">
+                                    <li class="sub-menuItem"><a href="about.html" class="subLink">About</a></li>
+                                    <hr id="line-subMenu">
+                                    <li class="sub-menuItem"><a href="service.html" class="subLink">Service</a></li>
+                                    <hr id="line-subMenu">
+                                    <li class="sub-menuItem"><a href="faq.html" class="subLink">Faq</a></li>
+                                    <hr id="line-subMenu">
+                                    <li class="sub-menuItem"><a href="contact.html" class="subLink">Contact</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -49,7 +59,25 @@
                 </div>
             </div>
 
+            <!--Header Title-->
+            <!-- <div class="header__title">
+                <div class="header__title--name">
+                    <h3>Feel The Rhythm</h3>
+                </div>
+                <div class="header__title--slogan">
+                    <h2>Sành Điệu & Phong Cách & Lựa Chọn của bạn </h2>
+                </div>
+                <div class="header__title--des">
 
+                    Love what you listen, listen to what you love. Music speaks when words don’t. Make it clear. Let
+                    music reach your heart.
+
+                </div>
+                <div class="header__title--action ">
+                    <a href="catalog.html"><button class="btn btn-shopnow btn-rouded">Mua Ngay</button></a>
+                </div>
+            </div> -->
+            <!-- End Header Title-->
         </div>
     </div>
     <!--End Header-->

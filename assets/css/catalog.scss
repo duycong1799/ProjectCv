@@ -1,192 +1,225 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-$color-cam : #fc846b;
-$color-white : #fff;
-$color-black : rgb(0, 0, 0);
-$font-playfair: 'Playfair Display', serif;
-$font-pop: 'Poppins', sans-serif;
-$font-roboto: 'Roboto', sans-serif;
-$font-playupdate: 'Playfair Display SC', serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+$color-cam: #fc846b;
+$color-white: #fff;
+$color-black: rgb(0, 0, 0);
+$font-playfair: "Playfair Display", serif;
+$font-playfair-noSan: "Playfair Display";
+$font-pop: "Poppins", sans-serif;
+$font-pop-noSan: "Poppins";
+$font-roboto: "Roboto", sans-serif;
+$font-playupdate: "Playfair Display SC", serif;
 
-
-*{
+* {
     width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{
+a {
     text-decoration: none;
 }
-li{
+li {
     list-style: none;
 }
-.btn{
-    display:inline-block;
+.btn {
+    display: inline-block;
     outline: 0;
-    border:0;
-    padding:12px 50px;
+    border: 0;
+    padding: 12px 50px;
     background-color: #373737;
     color: #fc846b;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: $font-pop-noSan;
     font-weight: bold;
     cursor: pointer;
-
 }
-.btn-rouded{
+.btn-rouded {
     border-radius: 60px;
 }
-.btn-shopnow{
+.btn-shopnow {
     width: 220px;
     height: 55px;
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 20px;
-    transition: transform .5s;
+    transition: transform 0.5s;
 }
-.btn-shopnow:hover{
+.btn-shopnow:hover {
     background-color: #fc846b;
     color: white;
     // -ms-transform: scale(1.5); /* IE 9 */
     // -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
-hr{
+hr {
     width: 90px;
     border: 1px solid #fc846b;
     background-color: #fc846b;
-    
 }
-body{
+body {
     position: relative;
-    
 }
+
 /* Begin Wrapper*/
-.wrapper{
-    width:100%;
-    height: 800px;
-    .background{
-        width:100%;
+.wrapper {
+    width: 100%;
+    height: 1004px;
+
+    .background {
+        width: 100%;
         height: 794px;
         position: absolute;
-        
     }
-    .header{
+    .header {
         position: relative;
-        width:100%;
-        padding : 18px 0;
-        .header__nav{
-            display:flex;
+        width: 100%;
+        // padding : 18px 0;
+
+        .header__nav {
+            display: flex;
             width: 90%;
             justify-content: space-between;
             margin: 0 auto;
             padding: 40px 0;
-            .header__left{
+
+            .header__left {
                 display: flex;
                 width: 1100px;
-                .header__left--logo{
+                .header__left--logo {
                     width: 200px;
                     cursor: pointer;
-                    img{
-                        width: 160px;
+                    img {
+                        width: 170px;
                     }
                 }
-                .header__left--menu{
-                    width: 500px;
-                    ul{
+                .header__left--menu {
+                    width: 800px;
+                    ul.menu-list {
                         height: 100%;
-                        display:flex;
+                        display: flex;
                         justify-content: center;
                         align-items: center;
                         .menu-item {
                             margin-left: 25px;
-                            padding:0 25px;
-                            cursor: pointer;                        
+                            padding: 18px 55px;
+                            cursor: pointer;
+                            position: relative;
+
+                            .parentLink {
+                                font-size: 20px;
+                                color: #2e2e2e;
+                                font-weight: bold;
+                                font-family: $font-pop;
+                            }
+                            .sub-menu {
+                                display: none;
+                                position: absolute;
+                                margin-top: 50px;
+
+                                .sub-menuItem {
+                                    .subLink {
+                                        font-weight: normal;
+                                        color: #373737;
+                                    }
+                                    .subLink:hover {
+                                        color: #fc846b;
+                                        transition: color 0.5s;
+                                        text-decoration: none;
+                                    }
+                                }
+
+                                #line-subMenu {
+                                    border: 0.5px solid #e9e9e9;
+                                    width: 200px;
+                                    margin: auto;
+                                    margin-left: -1px;
+                                    margin: 5px 0;
+                                }
+                            }
+                        }
+                        .menu-item:hover .sub-menu {
+                            display: block;
+                            width: 250px;
+                            background-color: $color-white;
+                            border: 1px solid #9e9e9e;
+                            padding: 10px 12px 10px 12px;
+                            font-weight: normal;
+                            margin-top: 10px;
                         }
 
-                            a{
-                                
-                                font-size: 20px;
-                                color:black;
-                                font-weight: 100;
-                                font-family: 'Roboto', sans-serif;
-                            }
-                            .active{
-                                color: #fc846b;
-                                transform: .5s;
-                            }
-                            a:hover{
-                                color: #fc846b;
-                                text-decoration: none;
-                            }
-                            
-                        
+                        .active {
+                            color: #fc846b;
+                            transform: 0.5s;
+                        }
+                        .parentLink:hover {
+                            color: #fc846b;
+                            text-decoration: none;
+                            transition: color 0.2s;
+                        }
                     }
-                    
                 }
             }
-            .header__right{
+            .header__right {
                 width: 300px;
                 display: flex;
-                
+
                 justify-content: space-between;
                 align-items: center;
-                img{
+                img {
                     width: 10%;
                     margin-left: 102px;
                     margin-right: 5px;
                 }
-                p{
+                p {
                     margin-right: -13px;
                     margin-bottom: 0;
                     color: rgb(0, 0, 0);
-                } 
-            
+                }
+                i {
+                    font-size: 22px;
+                    padding: 0 5px;
+                }
             }
         }
-        .header__title{
+        .header__title {
             position: relative;
-            margin-top: 250px;
+            margin-top: 135px;
             width: 610px;
             margin-left: 90px;
-            .header__title--name{
+            .header__title--name {
                 width: 100%;
-                h3{
-                    font-size: 22px;
-                    font-family: 'Poppins', sans-serif;
+                h3 {
+                    font-size: 24px;
+                    font-family: $font-pop-noSan;
                     color: rgb(46, 46, 46);
                 }
             }
-            .header__title--slogan{
+            .header__title--slogan {
                 width: 100%;
-                
-                h2{
-                    font-size: 40px;
-                    font-family: 'Playfair Display', serif;
+
+                h2 {
+                    font-size: 72px;
+                    font-family: $font-playfair-noSan;
                     margin-bottom: 18px;
-                    font-weight: bold;
+                    font-weight: 500;
                     color: #fc846b;
                 }
             }
-            .header__title--des{
+            .header__title--des {
                 width: 100%;
-                font-size: 16px;
-                font-family: 'Poppins', sans-serif;
+                font-size: 18px;
+                font-family: $font-pop-noSan;
                 margin: 10px 0px 20px;
                 color: rgb(46, 46, 46);
             }
-            .header__title--action{
-
+            .header__title--action {
             }
         }
-        
     }
-
-
 }
 /* End Wrapper*/
 
