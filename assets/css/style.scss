@@ -88,9 +88,9 @@ body {
 
             .header__left {
                 display: flex;
-                width: 1100px;
+                width: 800px;
                 .header__left--logo {
-                    width: 200px;
+                    width: 150px;
                     cursor: pointer;
                     img {
                         width: 170px;
@@ -98,14 +98,19 @@ body {
                 }
                 .header__left--menu {
                     width: 800px;
+                    margin-left: 50px;
                     ul.menu-list {
                         height: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        .active {
+                            color: #fc846b;
+                            transform: 0.5s;
+                        }
                         .menu-item {
                             margin-left: 25px;
-                            padding: 18px 55px;
+                            padding: 18px 30px;
                             cursor: pointer;
                             position: relative;
 
@@ -115,50 +120,78 @@ body {
                                 font-weight: bold;
                                 font-family: $font-pop;
                             }
+                            .parentLink:hover {
+                                color: #fc846b;
+                                text-decoration: none;
+                                transition: color 0.2s;
+                            }
                             .sub-menu {
                                 display: none;
                                 position: absolute;
                                 margin-top: 50px;
 
                                 .sub-menuItem {
+                                    width: 200px;
+                                    height: 60px;
+                                    transform-origin:50% 0;
+                                    transform:perspective(350px) rotateX(-90deg) ;
+                                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+                                    background-color: $color-white;
+                                    color: $color-black;
+                                    
                                     .subLink {
+                                        font-family: $font-pop-noSan;
                                         font-weight: normal;
                                         color: #373737;
+                                        line-height: 60px;
+                                        margin-left: 25px;
                                     }
-                                    .subLink:hover {
-                                        color: #fc846b;
+                                    .subLink:hover {  
                                         transition: color 0.5s;
                                         text-decoration: none;
+                                        
                                     }
                                 }
-
-                                #line-subMenu {
-                                    border: 0.5px solid #e9e9e9;
-                                    width: 200px;
-                                    margin: auto;
-                                    margin-left: -1px;
-                                    margin: 5px 0;
+                                .sub-menuItem:hover{
+                                    background-color: $color-cam;
+                                    color: $color-black;
                                 }
+
+                                // #line-subMenu {
+                                //     border: 0.5px solid #e9e9e9;
+                                //     width: 200px;
+                                //     margin: auto;
+                                //     margin-left: -1px;
+                                //     margin: 5px 0;
+                                // }
                             }
+                            .sub-menu:hover .sub-menuItem{                             
+                                transform: perspective(350px) rotateX(0deg);
+                                transition: 0.2s;
+                            }
+                            .sub-menu:hover .sublink-1{
+                                transition-delay: 0.2s;
+                            }
+                            .sub-menu:hover .sublink-2{
+                                transition-delay: 0.4s;
+                            }
+                            .sub-menu:hover .sublink-3{
+                                transition-delay: 0.6s;
+                            }
+                            .sub-menu:hover .sublink-4{
+                                transition-delay: 0.8s;
+                            }
+                            
                         }
                         .menu-item:hover .sub-menu {
                             display: block;
                             width: 250px;
-                            background-color: $color-white;
-                            border: 1px solid #9e9e9e;
-                            padding: 10px 12px 10px 12px;
+                            // background-color: $color-white;
+                            // border: 1px solid #9e9e9e;
+                            // padding: 10px 12px 10px 12px;
                             font-weight: normal;
                             margin-top: 10px;
-                        }
-
-                        .active {
-                            color: #fc846b;
-                            transform: 0.5s;
-                        }
-                        .parentLink:hover {
-                            color: #fc846b;
-                            text-decoration: none;
-                            transition: color 0.2s;
+                            
                         }
                     }
                 }
@@ -193,7 +226,7 @@ body {
             .header__title--name {
                 width: 100%;
                 h3 {
-                    font-size: 24px;
+                    font-size: 22px;
                     font-family: $font-pop-noSan;
                     color: rgb(46, 46, 46);
                 }
@@ -202,7 +235,7 @@ body {
                 width: 100%;
 
                 h2 {
-                    font-size: 72px;
+                    font-size: 40px;
                     font-family: $font-playfair-noSan;
                     margin-bottom: 18px;
                     font-weight: 500;
@@ -210,8 +243,8 @@ body {
                 }
             }
             .header__title--des {
-                width: 100%;
-                font-size: 18px;
+                width: 90%;
+                font-size: 16px;
                 font-family: $font-pop-noSan;
                 margin: 10px 0px 20px;
                 color: rgb(46, 46, 46);
@@ -474,11 +507,11 @@ body {
     }
     .square-image {
         position: absolute;
-        width: 400px;
-        height: 400px;
+        width: 250px;
+        height: 250px;
         background-color: #fc846b;
         margin-top: 178px;
-        margin-left: 175px;
+        margin-left: 72px;
         opacity: 0.1;
         transform: rotate(65deg);
         border-radius: 50px;
@@ -676,7 +709,7 @@ body {
     .blog__more {
         position: relative;
         width: 90%;
-        height: 800px;
+        
         top: 80px;
 
         display: flex;
@@ -684,7 +717,7 @@ body {
         justify-content: center;
         .blog__view {
             width: 33.3%;
-            padding: 0 2.5%;
+            padding: 0 20px;
 
             .blog__view--image {
                 position: relative;
@@ -694,7 +727,7 @@ body {
 
                 img {
                     width: 100%;
-                    height: 242px;
+                    height: 300px;
                     border-radius: 25px;
                     object-fit: cover;
                     object-position: 0% 40%;
@@ -705,7 +738,7 @@ body {
                     left: 0;
                     bottom: 0;
                     right: 0;
-                    height: 242px;
+                    height: 300px;
                     width: 100%;
                     opacity: 0;
                     border-radius: 25px;
@@ -718,10 +751,11 @@ body {
             }
 
             .blog__view--title {
-                margin-top: 20px;
+                
+                margin-top: 80px;
                 a {
-                    font-size: 24px;
-                    font-family: "Playfair Display", serif;
+                    font-size: 20px;
+                    font-family: $font-playfair-noSan;
                     color: black;
                 }
                 a:hover {
@@ -732,12 +766,18 @@ body {
             .blog__view--datepost {
                 padding: 5px 0px;
                 color: #979797;
+                font-size: 16px;
+                font-family: $font-pop-noSan;
+            }
+            .blog__view--des{
+                font-size: 16px;
             }
             .readmore {
                 font-size: 14px;
-                width: 137px;
-                padding: 16px 10px;
-                position: relative;
+                width: 175px;
+                padding: 2px 8px;
+                margin-bottom: 150px;
+                font-family: $font-pop-noSan;
             }
         }
     }
@@ -745,7 +785,7 @@ body {
 /*End wrapper6*/
 
 /*Begin Footer*/
-.wrapper7 {
+/* .wrapper7 {
     width: 100%;
     position: relative;
     height: 536px;
@@ -862,5 +902,131 @@ body {
             }
         }
     }
+} */
+/*End Footer*/
+
+/*Begin Footer*/
+.wrapper7{
+    width: 100%;
+    position: relative;
+    height: 536px;
+    .footer{
+        width: 100%;
+        height: 536px;
+        #note{
+            position: absolute;
+            width: 100%;
+            height: 536px;
+            object-fit: cover;
+            object-position: 0% 63%;
+        }
+        
+        .opacity{
+            position: absolute;
+            width: 100%;
+            height: 536px;
+            background-color: #373737;
+            opacity: 0.3;
+        }
+        .footer__logo{
+            position: relative;
+            width: 10%;
+            margin: auto;
+            top:85px;
+        }
+        .footer--slogan{
+            position:relative;
+            text-align: center;
+            top: 125px;
+            color: white;
+            font-family: 'Playfair Display', serif;
+            h2{
+                font-size: 24px;
+            }
+        }
+        .search{
+            position: relative;
+            top:170px;
+            width: 45%;
+            background-color: white;
+            margin:auto;
+            padding: 5px;
+            border-radius: 30px;
+            display: flex;
+            .input{
+                position: relative;
+                width: 450px;
+                left: 15px;
+                border:0;
+                padding: 12px 15px;
+            }
+            .input{
+                border-color: white;
+            }
+            .input:focus{
+                border: none;
+            }
+            .submit{
+                position: relative;
+                width: 183px; 
+                left: 41px;
+                border-radius: 30px;
+                background-color: #fc846b;
+                color: white;
+                border: 0;
+                font-weight: 600;
+            }
+            .submit:hover{
+                background-color: black;
+                color:#fc846b;
+                transition: transform .5s;
+            }
+
+
+        }
+        .bylogin{
+            position: relative;
+            width: 90%;
+            margin: auto;
+            top:200px;
+            text-align: center;
+            
+            i{
+                display: inline-block;
+                color: #fc846b;
+                width: 60px;
+                height: 60px;
+                font-size: 25px;
+                text-align: center;
+                line-height: 60px;
+                cursor: pointer;
+            }
+            
+        }
+        .footer-contact{
+            position: relative;
+            width: 90%;
+            margin: auto;
+            top:250px;
+            text-align: center;
+            li{
+                color: white;
+                display: inline-block;
+                width: auto;
+                height: auto;
+                padding: 5px 15px;
+                font-family: 'Poppins', sans-serif;
+                font-size: 17px;
+                .note2{
+                    border-right: 1px;
+                    border-left: 1px;
+                    border-color: white;
+                    border-style: solid;
+                }
+
+            }
+        }
+    }
+
 }
 /*End Footer*/
