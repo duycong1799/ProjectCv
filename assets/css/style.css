@@ -63,11 +63,11 @@ body {
 /* Begin Wrapper*/
 .wrapper {
   width: 100%;
-  height: 1004px;
+  height: 800px;
 }
 .wrapper .background {
   width: 100%;
-  height: 794px;
+  height: 790px;
   position: absolute;
 }
 .wrapper .header {
@@ -79,7 +79,7 @@ body {
   width: 90%;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .wrapper .header .header__nav .header__left {
   display: flex;
@@ -90,14 +90,14 @@ body {
   cursor: pointer;
 }
 .wrapper .header .header__nav .header__left .header__left--logo img {
-  width: 170px;
+  width: 150px;
 }
 .wrapper .header .header__nav .header__left .header__left--menu {
-  width: 800px;
+  width: 450px;
   margin-left: 50px;
 }
 .wrapper .header .header__nav .header__left .header__left--menu ul.menu-list {
-  height: 100%;
+  width: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,13 +107,15 @@ body {
   transform: 0.5s;
 }
 .wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item {
-  margin-left: 25px;
-  padding: 18px 30px;
+  display: inline;
+  padding: 18px 25px;
   cursor: pointer;
   position: relative;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 .wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .parentLink {
-  font-size: 20px;
+  font-size: 18px;
   color: #2e2e2e;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
@@ -123,56 +125,30 @@ body {
   text-decoration: none;
   transition: color 0.2s;
 }
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu {
-  display: none;
+.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item > .sub-menu {
+  width: 170px;
   position: absolute;
-  margin-top: 50px;
+  background-color: #ffd9d9;
+  display: none;
 }
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu .sub-menuItem {
-  width: 200px;
-  height: 60px;
-  transform-origin: 50% 0;
-  transform: perspective(350px) rotateX(-90deg);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
-  color: black;
+.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item > .sub-menu li {
+  padding: 8px 15px;
 }
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu .sub-menuItem .subLink {
-  font-family: "Poppins";
-  font-weight: normal;
-  color: #373737;
-  line-height: 60px;
-  margin-left: 25px;
-}
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu .sub-menuItem .subLink:hover {
-  transition: color 0.5s;
-  text-decoration: none;
-}
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu .sub-menuItem:hover {
+.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item > .sub-menu li:hover {
   background-color: #fc846b;
-  color: black;
 }
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu:hover .sub-menuItem {
-  transform: perspective(350px) rotateX(0deg);
-  transition: 0.2s;
+.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item > .sub-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
 }
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu:hover .sublink-1 {
-  transition-delay: 0.2s;
+.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item > .sub-menu hr {
+  width: 169px;
+  margin: 0;
 }
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu:hover .sublink-2 {
-  transition-delay: 0.4s;
-}
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu:hover .sublink-3 {
-  transition-delay: 0.6s;
-}
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item .sub-menu:hover .sublink-4 {
-  transition-delay: 0.8s;
-}
-.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item:hover .sub-menu {
+.wrapper .header .header__nav .header__left .header__left--menu ul.menu-list .menu-item:hover > .sub-menu {
   display: block;
-  width: 250px;
-  font-weight: normal;
-  margin-top: 10px;
 }
 .wrapper .header .header__nav .header__right {
   width: 300px;
@@ -209,17 +185,17 @@ body {
   color: #2e2e2e;
 }
 .wrapper .header .header__title .header__title--slogan {
-  width: 100%;
+  width: 80%;
 }
 .wrapper .header .header__title .header__title--slogan h2 {
   font-size: 40px;
   font-family: "Playfair Display";
   margin-bottom: 18px;
-  font-weight: 500;
-  color: #fc846b;
+  font-weight: 600;
+  color: #f87a61;
 }
 .wrapper .header .header__title .header__title--des {
-  width: 90%;
+  width: 95%;
   font-size: 16px;
   font-family: "Poppins";
   margin: 10px 0px 20px;
@@ -236,15 +212,17 @@ body {
   width: 100%;
 }
 .wrapper2 .section .section__1 {
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
   margin: auto;
 }
 .wrapper2 .section .section__1 .section--image {
-  width: 150%;
-  margin-left: 110px;
+  width: 50%;
   transform: rotate(40deg);
+}
+.wrapper2 .section .section__1 .section--image #pro-section-1 {
+  width: 100%;
 }
 .wrapper2 .section .section__1 .section__detail {
   display: flex;
@@ -252,17 +230,17 @@ body {
   flex-direction: column;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: 100px;
-  width: 100%;
+  width: 50%;
+  margin-left: 130px;
 }
-.wrapper2 .section .section__1 .section__detail .section__deatil--name h4 {
+.wrapper2 .section .section__1 .section__detail .section__deatil--name {
   color: black;
   font-size: 24px;
   font-family: "Poppins";
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 30px;
 }
-.wrapper2 .section .section__1 .section__detail .section__deatil--name h4:after {
+.wrapper2 .section .section__1 .section__detail .section__deatil--name:after {
   background: #fc846b;
   content: "";
   display: inline-block;
@@ -276,6 +254,7 @@ body {
   font-family: "Playfair Display";
   color: #fc846b;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 .wrapper2 .section .section__1 .section__detail .section__detail--des {
   display: inline-block;
@@ -288,13 +267,14 @@ body {
   line-height: 1.7;
 }
 .wrapper2 .section .section__2 {
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
   margin: auto;
+  margin-top: 90px;
 }
 .wrapper2 .section .section__2 .section--image {
-  width: 100%;
+  width: 50%;
 }
 .wrapper2 .section .section__2 .section__detail {
   display: flex;
@@ -303,16 +283,16 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 100px;
-  width: 100%;
+  width: 50%;
 }
-.wrapper2 .section .section__2 .section__detail .section__deatil--name h4 {
+.wrapper2 .section .section__2 .section__detail .section__deatil--name {
   color: black;
   font-size: 24px;
   font-family: "Poppins";
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 30px;
 }
-.wrapper2 .section .section__2 .section__detail .section__deatil--name h4:after {
+.wrapper2 .section .section__2 .section__detail .section__deatil--name:after {
   background: #fc846b;
   content: "";
   display: inline-block;
@@ -326,6 +306,7 @@ body {
   font-family: "Playfair Display";
   color: #fc846b;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 .wrapper2 .section .section__2 .section__detail .section__detail--des {
   display: inline-block;
@@ -661,7 +642,7 @@ body {
   margin-top: 80px;
 }
 .wrapper6 .blog__more .blog__view .blog__view--title a {
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Playfair Display";
   color: black;
 }
@@ -670,13 +651,14 @@ body {
   color: #fc846b;
 }
 .wrapper6 .blog__more .blog__view .blog__view--datepost {
-  padding: 5px 0px;
+  padding: 8px 0px;
   color: #979797;
   font-size: 16px;
   font-family: "Poppins";
 }
 .wrapper6 .blog__more .blog__view .blog__view--des {
   font-size: 16px;
+  font-family: "Poppins";
 }
 .wrapper6 .blog__more .blog__view .readmore {
   font-size: 14px;
